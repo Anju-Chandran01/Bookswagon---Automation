@@ -1,2 +1,2 @@
 # Bookswagon Automation
-Automate an online bookstore application called "Booksagon" using Hybrid Model
+Automate an online bookstore application "Bookswagon" using Hybrid Model.
