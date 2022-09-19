@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,16 @@
                       <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="com.bz.bookswagon.qa.testcases.HomePageTest" class="method navigator-link" hash-for-method="homePage_Heading_Test">homePage_Heading_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="com.bz.bookswagon.qa.testcases.HomePageTest" class="method navigator-link" hash-for-method="homePage_UrlTest">homePage_UrlTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="com.bz.bookswagon.qa.testcases.HomePageTest" class="method navigator-link" hash-for-method="searchBoxTest">searchBoxTest</a> <!-- method navigator-link -->
@@ -125,6 +135,20 @@
               <span class="class-name">com.bz.bookswagon.qa.testcases.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="homePage_Heading_Test">
+                  </a> <!-- homePage_Heading_Test -->
+                  <span class="method-name">homePage_Heading_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="homePage_UrlTest">
+                  </a> <!-- homePage_UrlTest -->
+                  <span class="method-name">homePage_UrlTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="searchBoxTest">
@@ -186,11 +210,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchBoxTest')
 data.setCell(0, 2, 'com.bz.bookswagon.qa.testcases.HomePageTest')
-data.setCell(0, 3, 2054);
+data.setCell(0, 3, 2648);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'homePage_Heading_Test')
+data.setCell(1, 2, 'com.bz.bookswagon.qa.testcases.HomePageTest')
+data.setCell(1, 3, 223);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'homePage_UrlTest')
+data.setCell(2, 2, 'com.bz.bookswagon.qa.testcases.HomePageTest')
+data.setCell(2, 3, 17);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
@@ -227,12 +259,36 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">searchBoxTest</span>
-                <span class="method-start">44255 ms</span>
+                <span class="method-name">homePage_Heading_Test</span>
+                <span class="method-start">51741 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">46318 ms</span>
+                <span class="method-start">52034 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">58028 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">homePage_UrlTest</span>
+                <span class="method-start">93969 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">93987 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">100738 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchBoxTest</span>
+                <span class="method-start">128698 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">131346 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

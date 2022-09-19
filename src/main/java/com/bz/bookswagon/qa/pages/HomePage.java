@@ -1,6 +1,7 @@
 package com.bz.bookswagon.qa.pages;
 
 import com.bz.bookswagon.qa.base.TestBase;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -39,6 +40,12 @@ public class HomePage extends TestBase {
     @FindBy(xpath="//a[normalize-space()='Change Password']")
     WebElement changePassword;
 
+    @FindBy(xpath="//label[@id='ctl00_lblWishlistCount']")
+    WebElement wishlistLogo;
+
+    @FindBy(xpath="//input[@type='submit' and @value='Remove']")
+    WebElement removeButton;
+
     //initialising page objects
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -57,5 +64,11 @@ public class HomePage extends TestBase {
         searchBar.sendKeys(bookName);
         searchButton.click();
         return new SearchBooksPage();
+    }
+
+    public void directRemoveFromWishlist(){
+        wishlistLogo.click();
+        driver.findElement(By.xpath("//a[normalize-space()='Ikigai']"));
+        removeButton.click();
     }
 }
