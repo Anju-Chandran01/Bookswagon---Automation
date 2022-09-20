@@ -14,7 +14,7 @@ public class SearchBooks extends TestBase {
     @FindBy(xpath="//input[@value='Buy Now']")
     WebElement buyNowButton;
 
-    @FindBy(id = "BookCart_lvCart_imgPayment")
+    @FindBy(xpath="//input[@name='BookCart$lvCart$imgPayment']")
     WebElement placeOrderButton;
 
     // initialising page objects
@@ -41,8 +41,12 @@ public class SearchBooks extends TestBase {
         if (check.isDisplayed()) {
             check.click();
             buyNowButton.click();
-            driver.switchTo().frame("cbox1663604928421");
-            //  testUtil.switchToFrame();
+            try {
+                Thread .sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            driver.switchTo().frame(0);
             placeOrderButton.click();
             return true;
         }else{
