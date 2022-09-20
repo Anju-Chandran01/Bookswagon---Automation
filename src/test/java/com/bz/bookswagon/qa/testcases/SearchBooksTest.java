@@ -30,17 +30,17 @@ public class SearchBooksTest extends TestBase {
         homePage = loginPage.login(prop.getProperty("mobile"), prop.getProperty("pass"));
         searchBooksPage = homePage.searchBooksUsingSearchBar("Rich Dad Poor Dad");
     }
-//
-//    @Test(priority = 1)
-//    public void searchBooksPageUrl_Test(){
-//        String url = searchBooksPage.verify_SearchBooks_url();
-//        Assert.assertEquals(url,"https://www.bookswagon.com/search-books/rich-dad-poor-dad");
-//    }
-//
-//    @Test(priority = 2)
-//    public void searchBooks_AddToCart_Test(){
-//        searchBooksPage.searchBookAndAddToCart();
-//    }
+
+    @Test(priority = 1)
+    public void searchBooksPageUrl_Test(){
+        String url = searchBooksPage.verify_SearchBooks_url();
+        Assert.assertEquals(url,"https://www.bookswagon.com/search-books/rich-dad-poor-dad");
+    }
+
+    @Test(priority = 2)
+    public void searchBooks_AddToCart_Test(){
+        searchBooksPage.searchBookAndAddToCart();
+    }
 
     @Test(priority = 3)
     public void searchBooks_AddToCart_PlaceAnOrder_Test(){
