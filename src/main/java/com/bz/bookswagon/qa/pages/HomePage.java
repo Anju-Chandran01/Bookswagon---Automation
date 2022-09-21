@@ -60,10 +60,10 @@ public class HomePage extends TestBase {
         return pageHeading.isDisplayed();
     }
 
-    public SearchBooksPage searchBooksUsingSearchBar(String bookName){
+    public SearchBooks searchBooksUsingSearchBar(String bookName){
         searchBar.sendKeys(bookName);
         searchButton.click();
-        return new SearchBooksPage();
+        return new SearchBooks();
     }
 
     public void directRemoveFromWishlist(){

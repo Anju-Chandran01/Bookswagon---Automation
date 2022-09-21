@@ -11,6 +11,7 @@
             <class name="com.bz.bookswagon.qa.testcases.LoginPageTest"/>
             <class name="com.bz.bookswagon.qa.testcases.HomePageTest"/>
             <class name="com.bz.bookswagon.qa.testcases.SearchBooksTest"/>
+            <class name="com.bz.bookswagon.qa.testcases.NewArrivalsTest"/>
         </classes>
     </test>
 </suite>

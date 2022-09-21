@@ -3,7 +3,7 @@ package com.bz.bookswagon.qa.testcases;
 import com.bz.bookswagon.qa.base.TestBase;
 import com.bz.bookswagon.qa.pages.HomePage;
 import com.bz.bookswagon.qa.pages.LoginPage;
-import com.bz.bookswagon.qa.pages.SearchBooksPage;
+import com.bz.bookswagon.qa.pages.SearchBooks;
 import com.bz.bookswagon.qa.util.TestUtil;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,7 +14,7 @@ public class SearchBooksTest extends TestBase {
 
     LoginPage loginPage;
     HomePage homePage;
-    SearchBooksPage searchBooksPage;
+    SearchBooks searchBooksPage;
     TestUtil testUtil;
 
     public SearchBooksTest(){
@@ -26,7 +26,7 @@ public class SearchBooksTest extends TestBase {
         initialization();
         testUtil = new TestUtil();
         loginPage = new LoginPage();
-        searchBooksPage = new SearchBooksPage();
+        searchBooksPage = new SearchBooks();
         homePage = loginPage.login(prop.getProperty("mobile"), prop.getProperty("pass"));
         searchBooksPage = homePage.searchBooksUsingSearchBar("Rich Dad Poor Dad");
     }
@@ -44,7 +44,7 @@ public class SearchBooksTest extends TestBase {
 
     @Test(priority = 3)
     public void searchBooks_AddToCart_PlaceAnOrder_Test(){
-        searchBooksPage = new SearchBooksPage();
+        searchBooksPage = new SearchBooks();
         boolean checkBook = searchBooksPage.searchBookAndPlaceOrder("Rich Dad Poor Dad");
         Assert.assertTrue(checkBook);
     }

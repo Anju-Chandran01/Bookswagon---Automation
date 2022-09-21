@@ -3,12 +3,11 @@ package com.bz.bookswagon.qa.pages;
 import com.bz.bookswagon.qa.base.TestBase;
 import com.bz.bookswagon.qa.util.TestUtil;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SearchBooksPage extends TestBase {
+public class SearchBooks extends TestBase {
 
     TestUtil testUtil;
 
@@ -19,7 +18,7 @@ public class SearchBooksPage extends TestBase {
     WebElement placeOrderButton;
 
     // initialising page objects
-    public SearchBooksPage() {
+    public SearchBooks() {
         PageFactory.initElements(driver, this);
     }
 
@@ -53,4 +52,5 @@ public class SearchBooksPage extends TestBase {
             return false;
         }
     }
+
 }

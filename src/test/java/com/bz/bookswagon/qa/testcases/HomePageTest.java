@@ -3,7 +3,7 @@ package com.bz.bookswagon.qa.testcases;
 import com.bz.bookswagon.qa.base.TestBase;
 import com.bz.bookswagon.qa.pages.HomePage;
 import com.bz.bookswagon.qa.pages.LoginPage;
-import com.bz.bookswagon.qa.pages.SearchBooksPage;
+import com.bz.bookswagon.qa.pages.SearchBooks;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,7 +13,7 @@ public class HomePageTest extends TestBase {
 
     LoginPage loginPage;
     HomePage homePage;
-    SearchBooksPage searchBooksPage;
+    SearchBooks searchBooksPage;
 
     public HomePageTest(){
         super();
