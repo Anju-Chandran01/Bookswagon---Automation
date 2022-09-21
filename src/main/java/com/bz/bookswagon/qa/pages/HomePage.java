@@ -43,8 +43,14 @@ public class HomePage extends TestBase {
     @FindBy(xpath="//label[@id='ctl00_lblWishlistCount']")
     WebElement wishlistLogo;
 
+    @FindBy(id="ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd")
+//    @FindBy(xpath="///input[@id='ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd']")
+//    @FindBy(css = "input#ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd")
+    WebElement selectCheckbox;
+
     @FindBy(xpath="//input[@type='submit' and @value='Remove']")
     WebElement removeButton;
+
 
     //initialising page objects
     public HomePage() {
@@ -69,6 +75,7 @@ public class HomePage extends TestBase {
     public void directRemoveFromWishlist(){
         wishlistLogo.click();
         driver.findElement(By.xpath("//a[normalize-space()='Ikigai']"));
+        selectCheckbox.click();
         removeButton.click();
     }
 }

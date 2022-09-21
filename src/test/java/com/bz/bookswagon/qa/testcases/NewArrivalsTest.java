@@ -16,7 +16,6 @@ public class NewArrivalsTest extends TestBase {
     LoginPage loginPage;
     HomePage homePage;
     NewArrivals newArrivalsPage;
-    TestUtil testUtil;
 
 
     public NewArrivalsTest(){
@@ -26,7 +25,6 @@ public class NewArrivalsTest extends TestBase {
     @BeforeMethod
     public void setUp(){
         initialization();
-        testUtil = new TestUtil();
         loginPage = new LoginPage();
         homePage = loginPage.login(prop.getProperty("mobile"), prop.getProperty("pass"));
         newArrivalsPage = new NewArrivals();
