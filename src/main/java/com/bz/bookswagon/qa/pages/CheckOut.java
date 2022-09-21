@@ -14,15 +14,15 @@ public class CheckOut {
     WebElement specialInstruction;
 
     @FindBy(id="ctl00_cpBody_ShoppingCart_lvCart_savecontinue")
-    WebElement saveAndContinue;
+    WebElement saveAndContinueButtton;
 
     public CheckOut(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     public void checkOutFromCart(){
-        giftMessage.sendKeys("Happy Birthday");
-        specialInstruction.sendKeys("Please Wrap Gift In Red Paper");
-        saveAndContinue.click();
+        giftMessage.sendKeys("Happy Birthday Appu");
+        specialInstruction.sendKeys("Please wrap the book with red paper and also include some chocolates inside ");
+        saveAndContinueButtton.click();
     }
 }

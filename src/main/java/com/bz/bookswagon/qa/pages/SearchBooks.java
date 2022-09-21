@@ -41,11 +41,8 @@ public class SearchBooks extends TestBase {
         if (check.isDisplayed()) {
             check.click();
             buyNowButton.click();
-            driver.switchTo().frame("//iframe[@name='cbox1663604928421' and @class='cboxIframe']");
+            driver.switchTo().frame("cbox1663604928421");
             //  testUtil.switchToFrame();
-            /* <iframe frameborder="0" name="cbox1663604928421"
-                src="https://www.bookswagon.com/shoppingcart.aspx?&amp;pid=21258388&amp;vid=111&amp;ptype=1"
-                scrolling="no" class="cboxIframe" xpath="1"></iframe>*/
             placeOrderButton.click();
             return true;
         }else{
