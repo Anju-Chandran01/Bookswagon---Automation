@@ -35,6 +35,7 @@ public class SearchBooks extends TestBase {
         }
     }
 
+
     // After search, add book to cart and place an order
     public boolean searchBookAndPlaceOrder(String bookName) {
         WebElement check = driver.findElement(By.xpath("//a[normalize-space()='Rich Dad Poor Dad']"));
@@ -53,5 +54,4 @@ public class SearchBooks extends TestBase {
             return false;
         }
     }
-
 }

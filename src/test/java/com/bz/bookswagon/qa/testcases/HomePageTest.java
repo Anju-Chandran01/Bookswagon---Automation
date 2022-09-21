@@ -43,7 +43,13 @@ public class HomePageTest extends TestBase {
 //        searchBooksPage = homePage.searchBooksUsingSearchBar("Wings of Fire");
 //    }
 
+
     @Test(priority = 4)
+    public void searchBooks_AddToWishList_Test(){
+        homePage.searchBookAndAddToWishList("Chetan Bhagath");
+    }
+
+    @Test(priority = 5)
     public void directRemove_FromWishlist_Test(){
         homePage.directRemoveFromWishlist();
     }

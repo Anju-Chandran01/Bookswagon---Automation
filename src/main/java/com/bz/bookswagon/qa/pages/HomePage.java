@@ -44,9 +44,10 @@ public class HomePage extends TestBase {
     WebElement wishlistLogo;
 
     @FindBy(id="ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd")
-//    @FindBy(xpath="///input[@id='ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd']")
-//    @FindBy(css = "input#ctl00_phBody_WishList_lvWishList_ctrl1_chkAdd")
     WebElement selectCheckbox;
+
+    @FindBy(xpath="")
+    WebElement addToWishlistButton;
 
     @FindBy(xpath="//input[@type='submit' and @value='Remove']")
     WebElement removeButton;
@@ -70,6 +71,17 @@ public class HomePage extends TestBase {
         searchBar.sendKeys(bookName);
         searchButton.click();
         return new SearchBooks();
+    }
+
+    // After search with Author name add particular book to wishlist
+    public void searchBookAndAddToWishList(String authorName) {
+        searchBar.sendKeys(authorName);
+        searchButton.click();
+        WebElement check = driver.findElement(By.linkText("Half Girlfriend"));
+        if (check.isDisplayed()) {
+            check.click();
+            addToWishlistButton.click();
+        }
     }
 
     public void directRemoveFromWishlist(){
