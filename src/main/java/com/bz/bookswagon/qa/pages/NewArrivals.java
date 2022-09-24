@@ -47,11 +47,14 @@ public class NewArrivals extends TestBase {
             newArrivalButton.click();
             book.click();
             addToCart.click();
-            closeWindow.click();
-            selectCart.click();
+            Thread.sleep(7000);
             driver.switchTo().frame(1);
+            System.out.println("Enter inside frame");
+            Thread.sleep(7000);
             placeOrder.click();
+            Thread.sleep(7000);
             driver.switchTo().parentFrame();
+            Thread.sleep(7000);
             continueButton.click();
             shippingAddress.FillAddressDetails();
             checkOut.checkOutFromCart();

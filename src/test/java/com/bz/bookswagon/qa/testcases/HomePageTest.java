@@ -25,33 +25,39 @@ public class HomePageTest extends TestBase {
         loginPage = new LoginPage();
         homePage = loginPage.login(prop.getProperty("mobile"), prop.getProperty("pass"));
     }
-//
-//    @Test(priority = 1)
-//    public void homePage_Heading_Test(){
-//        boolean flag = homePage.validate_HomePage_Heading();
-//        Assert.assertTrue(flag);
-//    }
-//
-//    @Test(priority = 2)
-//    public void homePage_UrlTest(){
-//        String url = homePage.validate_HomePage_Url();
-//        Assert.assertEquals(url,"https://www.bookswagon.com/myaccount.aspx");
-//    }
-//
-//    @Test(priority = 3)
-//    public void searchBoxTest(){
-//        searchBooksPage = homePage.searchBooksUsingSearchBar("Wings of Fire");
-//    }
 
+    @Test(priority = 1)
+    public void homePage_Heading_Test(){
+        boolean flag = homePage.validate_HomePage_Heading();
+        Assert.assertTrue(flag);
+    }
+
+    @Test(priority = 2)
+    public void homePage_UrlTest(){
+        String url = homePage.validate_HomePage_Url();
+        Assert.assertEquals(url,"https://www.bookswagon.com/myaccount.aspx");
+    }
+
+    @Test(priority = 3)
+    public void searchBoxTest(){
+        searchBooksPage = homePage.searchBooksUsingSearchBar("Wings of Fire");
+    }
 
     @Test(priority = 4)
     public void searchBooks_AddToWishList_Test(){
-        homePage.searchBookAndAddToWishList("Chetan Bhagath");
+        Boolean flag = homePage.searchBookAndAddToWishList("Chetan Bhagath");
+        Assert.assertTrue(flag);
     }
 
     @Test(priority = 5)
-    public void directRemove_FromWishlist_Test(){
+    public void direct_RemoveFrom_Wishlist_Test(){
         homePage.directRemoveFromWishlist();
+    }
+
+    @Test(priority = 6)
+    public void logout_Test () throws InterruptedException {
+        String urlAfterLogout = homePage.logout();
+        Assert.assertEquals(urlAfterLogout, "https://www.bookswagon.com/login");
     }
 
     @AfterMethod

@@ -43,11 +43,26 @@ public class SearchBooksTest extends TestBase {
     }
 
     @Test(priority = 3)
-    public void searchBooks_AddToCart_PlaceAnOrder_Test(){
+    public void searchBooks_AddToCart_AddToWishlist_Test() throws InterruptedException {
         searchBooksPage = new SearchBooks();
-        boolean checkBook = searchBooksPage.searchBookAndPlaceOrder("Rich Dad Poor Dad");
+        boolean checkBook = searchBooksPage.searchBook_AddToCart_AddToWishlist();
         Assert.assertTrue(checkBook);
     }
+
+    @Test(priority = 4)
+    public void searchBooks_AddToCart_PlaceAnOrder_Test(){
+        searchBooksPage = new SearchBooks();
+        boolean checkBook = searchBooksPage.searchBookAndPlaceOrder();
+        Assert.assertTrue(checkBook);
+    }
+
+    @Test(priority = 5)
+    public void searchBooks_AddToCart_RemoveFromCart_Test() throws InterruptedException {
+        searchBooksPage = new SearchBooks();
+        boolean checkBook = searchBooksPage.searchBook_AddToCart_RemoveFromWishlist();
+        Assert.assertTrue(checkBook);
+    }
+
 
     @AfterMethod
     public void tearDown(){

@@ -54,7 +54,7 @@ public class RequestBook extends TestBase {
         bookTitle.sendKeys("Fundamentals of Software Testing");
         author.sendKeys("DOROTHY");
         email.sendKeys("anjuchandrancs01@gmail.com");
-        verifyEmailButton.click();
+//        verifyEmailButton.click();
         phone.sendKeys("7306096567");
         submitButton.click();
     }

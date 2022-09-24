@@ -5,8 +5,8 @@
     <classes>
       <class name="com.bz.bookswagon.qa.testcases.HomePageTest">
         <methods>
+          <include name="logout_Test"/>
           <include name="setUp"/>
-          <include name="directRemoveFromWishlist"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.bz.bookswagon.qa.testcases.HomePageTest -->

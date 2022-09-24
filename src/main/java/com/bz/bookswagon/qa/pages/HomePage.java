@@ -3,11 +3,13 @@ package com.bz.bookswagon.qa.pages;
 import com.bz.bookswagon.qa.base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends TestBase {
 
+    Actions action = new Actions(driver);
     // pagefactory OR object repository
 
     @FindBy(id="inputbar")
@@ -18,6 +20,12 @@ public class HomePage extends TestBase {
 
     @FindBy(xpath="//h1[contains(text(),'My Account')]")
     WebElement pageHeading;
+
+    @FindBy(id="ctl00_lblUser")
+    WebElement userName;
+
+    @FindBy(xpath="//a[@id='ctl00_lnkbtnLogout']")
+    WebElement logOut;
 
     @FindBy(xpath="//a[normalize-space()='My Account']")
     WebElement myAccount;
@@ -74,13 +82,16 @@ public class HomePage extends TestBase {
     }
 
     // After search with Author name add particular book to wishlist
-    public void searchBookAndAddToWishList(String authorName) {
+    public boolean searchBookAndAddToWishList(String authorName) {
         searchBar.sendKeys(authorName);
         searchButton.click();
         WebElement check = driver.findElement(By.linkText("Half Girlfriend"));
         if (check.isDisplayed()) {
             check.click();
             addToWishlistButton.click();
+            return true;
+        }else{
+            return false;
         }
     }
 
@@ -89,5 +100,14 @@ public class HomePage extends TestBase {
         driver.findElement(By.xpath("//a[normalize-space()='Ikigai']"));
         selectCheckbox.click();
         removeButton.click();
+    }
+
+    //logout
+    public String logout() throws InterruptedException {
+        action.moveToElement(userName).build().perform();
+        Thread.sleep(3000);
+        logOut.click();
+        Thread.sleep(3000);
+        return driver.getCurrentUrl();
     }
 }
