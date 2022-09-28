@@ -22,7 +22,7 @@ public class LoginPage extends TestBase {
     // name = ctl00$phBody$SignIn$txtPassword
     WebElement password;
 
-    @FindBy(xpath = "//a[text()='Login']")
+    @FindBy(xpath = "//a[text()='Logi']")
     WebElement loginButton;
 
     @FindBy(id="ctl00_phBody_SignIn_lblemailmsg")
